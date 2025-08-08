@@ -29,6 +29,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "         -- Make sure to setup mapleader before loading lazy.nvim so that 
 vim.g.maplocalleader = "\\"   -- mappings are correct.
 ----------------------------------------------------------------------------------------------------
-local plugin_specs = require("plugin.load") -- Load the spec loader
-require("lazy").setup(plugin_specs)         -- Setup lazy.nvim
+require("lazy").setup("plugin", {
+  change_detection = {
+    notify = false,
+  },
+})
 
