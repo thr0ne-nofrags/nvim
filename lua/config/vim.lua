@@ -9,7 +9,6 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = false                  -- Text wrapping
 vim.opt.viewoptions:append("folds")   -- Include folds in saved view
-require("config.autocmd.fold")
 
 -- Tab and indentation settings
 vim.opt.tabstop = 4             -- Number of spaces that a <Tab> character counts for
@@ -46,33 +45,13 @@ vim.opt.updatetime = 250
 
 vim.g.netrw_keepdir = 0       -- Fix for copying and moving files in netrw
 
--- autocmds
-require("config.autocmd.markdown") 
 
--- set relnum in file explorer
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "netrw",
-	callback = function()
-		vim.wo.relativenumber = true
-	end
-})
+-- set relnum in file explorer (deprecated, moved to oil.nvim)
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = "netrw",
+-- 	callback = function()
+-- 		vim.wo.relativenumber = true
+-- 	end
+-- })
 
--- indentation settings
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "c", "cpp", "h", "lua" },
-	callback = function()
-		vim.bo.shiftwidth = 2
-		vim.bo.tabstop = 2
-		vim.bo.softtabstop = 2
-		vim.bo.expandtab = true -- use spaces instead of tabs
-	end,
-})
 
--- highlight flash when yanking
-vim.api.nvim_create_autocmd('TextYankPost', {
-	desc = 'highlight when yanking text',
-	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-})

@@ -18,6 +18,7 @@ return {
 
         -- Control which extensions will be considered during "file" resolution
         use_file_extension = function(ext, file) return true end,
-      })
-    end,
-  }
+      }
+    )
+  end,
+}

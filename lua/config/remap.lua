@@ -2,7 +2,7 @@
 --
 vim.g.mapleader = " " -- set leader key to [SPACE]
 
-vim.keymap.set("n", "<Leader>b", vim.cmd.Ex) -- Open file explorer
+vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "File Explorer"}) -- Open file explorer
 -- _____________________________________________________________________________
 -- Move selected lines up and down with K and J. Will auto-indent.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

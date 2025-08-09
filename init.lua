@@ -11,4 +11,5 @@ the require() function.
 require("config.vim")
 require("config.remap")
 require("config.lazy")    -- Load the package manager (lazy.nvim)
+require("config.autocmd")
 --------------------------------------------------------------------------------
