@@ -31,7 +31,7 @@ vim.g.maplocalleader = "\\"   -- mappings are correct.
 ----------------------------------------------------------------------------------------------------
 require("lazy").setup("plugin", {
   change_detection = {
-    notify = false,
+    notify = false
   },
 })
 

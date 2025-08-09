@@ -61,7 +61,7 @@ return {
     }
   },
 
-  opts_extend = {
+  opts_extend = { 
     "sources.default"
   },
 
