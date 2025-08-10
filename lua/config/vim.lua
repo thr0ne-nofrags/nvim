@@ -8,6 +8,10 @@ vim.opt.scrolloff = 3
 vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = false                  -- Text wrapping
+vim.opt.linebreak = true
+vim.opt.showbreak = '⏎ '
+vim.opt.breakindent = true
+-- vim.opt.breakindentopt = { 'shift:2' }
 vim.opt.viewoptions:append("folds")   -- Include folds in saved view
 
 -- Tab and indentation settings
